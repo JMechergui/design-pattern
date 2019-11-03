@@ -1,4 +1,4 @@
-package tn.design.pattern.Builder;import java.lang.ref.PhantomReference;
+package tn.design.pattern.Builder;
 
 public class Test {
 
@@ -18,6 +18,8 @@ public class Test {
 				.setColor("WHITE")
 				.setModel("X")
 				.setStorage("200G")
+				.addFeature("test")
+				.addFeature("test1")
 				.getIphone());
 		
 

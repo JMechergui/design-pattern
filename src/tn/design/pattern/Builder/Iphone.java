@@ -1,5 +1,7 @@
 package tn.design.pattern.Builder;
 
+import java.util.List;
+
 public class Iphone {
 
 	private String model;
@@ -8,15 +10,18 @@ public class Iphone {
 
 	private String storage;
 
+	private List<String> features;
+
 	public Iphone() {
 		super();
 	}
 
-	public Iphone(String model, String color, String storage) {
+	public Iphone(String model, String color, String storage, List<String> features) {
 		super();
 		this.model = model;
 		this.color = color;
 		this.storage = storage;
+		this.features = features;
 	}
 
 	public String getModel() {
@@ -43,8 +48,18 @@ public class Iphone {
 		this.storage = storage;
 	}
 
+	public List<String> getFeatures() {
+		return features;
+	}
+
+	public void setFeatures(List<String> features) {
+		this.features = features;
+	}
+
 	@Override
 	public String toString() {
-		return "Iphone [model=" + model + ", color=" + color + ", storage=" + storage + "]";
+		return "Iphone [model=" + model + ", color=" + color + ", storage=" + storage + ", features=" + features + "]";
 	}
+
+	 
 }

@@ -1,5 +1,8 @@
 package tn.design.pattern.Builder;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class IphoneBuilder {
 
 	private String model;
@@ -8,6 +11,8 @@ public class IphoneBuilder {
 
 	private String storage;
 
+	private List<String>features;
+	
 	public String getModel() {
 		return model;
 	}
@@ -31,6 +36,14 @@ public class IphoneBuilder {
 	public String getStorage() {
 		return storage;
 	}
+	
+	public List<String> getFeatures() {
+		return features;
+	}
+
+	public void setFeatures(List<String> features) {
+		this.features = features;
+	}
 
 	public IphoneBuilder setStorage(String storage) {
 		this.storage = storage;
@@ -38,9 +51,18 @@ public class IphoneBuilder {
 		return this;
 	}
 	
+	
+	public IphoneBuilder addFeature(String name){
+		if(features==null)
+			features=new ArrayList<>();
+		
+		this.features.add(name);
+		
+		return this;
+	}
 	public Iphone getIphone(){
 		
-		return new Iphone(model, color, storage);
+		return new Iphone(model, color, storage,features);
 	}
 
 }

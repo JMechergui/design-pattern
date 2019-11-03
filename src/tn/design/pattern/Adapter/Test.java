@@ -12,8 +12,6 @@ public class Test {
      iphone6.setColor("White");
      iphone6.setStorage("64g");
      
-     //chargeur 6s
-     IphoneCharger6Impl phone6Charger=new  IphoneCharger6Impl();
      
      IphoneCharger4Impl phone4Charger=new  IphoneCharger4Impl();
      
