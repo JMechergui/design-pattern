@@ -20,6 +20,9 @@ public class Test {
 				.setStorage("200G")
 				.addFeature("test")
 				.addFeature("test1")
+				.addFeature("test1")
+				.addFeature("test1")
+				.addFeature("test1")
 				.getIphone());
 		
 
